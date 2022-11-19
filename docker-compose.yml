@@ -1,0 +1,44 @@
+version: "3.8"
+
+networks:
+  php-network:
+    driver: bridge
+
+volumes:
+  database:
+    driver: local
+
+services:
+  postgres:
+    image: "postgres:latest"
+    restart: always
+    volumes:
+      - "database:/var/lib/postgresql"
+    ports:
+      - "54320:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root123
+    networks:
+      - php-network
+  adminer:
+    image: "adminer:latest"
+    restart: always
+    ports:
+      - "1000:8080"
+    networks:
+      - php-network
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+  php:
+    image: "php:8.1-apache"
+    volumes:
+      - .:/var/www/html
+    build:
+      context: .docker/php
+    restart: always
+    ports:
+      - "2000:80"
+    networks:
+      - php-network
+
