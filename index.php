@@ -9,8 +9,7 @@
   
   var_dump($color1->equals($color2));
   var_dump($color1->equals($color3));
-  
-  // always false
+  //always false
   var_dump($color1->strictEquals($color2));
   var_dump($color1->strictEquals($color3));
   
@@ -27,7 +26,7 @@
   echo "<p style='color:rgb($rr, $rg, $rb);'>rgb($rr, $rg, $rb)</p>";
   
   try {
-    $color1->setValues(255, 100, 100);
+    $color1->setValues(256, 100, 100);
   } catch (\Exception $exception) {
     print_r($exception);
   }
