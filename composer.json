@@ -1,0 +1,9 @@
+{
+    "name": "perejro/pro",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/"
+        }
+    },
+    "require": {}
+}
