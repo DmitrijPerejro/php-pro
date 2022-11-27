@@ -1,5 +1,6 @@
 <?php
   namespace Core;
+  use Exceptions\Error;
   
   class User
   {
@@ -16,7 +17,9 @@
     
     public function __call(string $name, array $arguments)
     {
-      // TODO: Implement __call() method.
+      if (!method_exists($this, $name)) {
+        throw new Error("Method <b>$name</b> doesn't exists");
+      }
     }
   
     /**
@@ -30,7 +33,7 @@
     /**
      * @param string $name
      */
-    private function setName(string $name): void
+    public function setName(string $name): void
     {
       $this->name = $name;
     }
