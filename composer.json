@@ -1,0 +1,11 @@
+{
+    "name": "perejro/pro",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src"
+        }
+    },
+    "require": {
+        "ext-mbstring": "*"
+    }
+}
