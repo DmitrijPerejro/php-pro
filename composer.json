@@ -3,7 +3,7 @@
     "autoload": {
         "psr-4": {
             "Core\\": "src/",
-            "Exceptions\\": "src/exceptions/"
+            "Traits\\": "src/traits"
         }
     },
     "require": {}
