@@ -1,11 +1,15 @@
 version: "3.8"
 
+volumes:
+  db_v:
+    driver: local
+
 services:
-  app:
-    build:
-      context: .
-    ports:
-      - "3001:80"
+  db:
+    image: "mysql:8"
     volumes:
-      - .:/var/www/html
-    restart: "always"
+    - "db_v:/var/lib/mysql"
+    ports:
+      - "33060:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
