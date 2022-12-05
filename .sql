@@ -49,7 +49,6 @@ delete from Customers where name = 'Valera';
 delete from Orders where status = 'rejected';
 
 select name from Customers where id > 1
-select name from Customers where id > 1
 select * from Deliveries where delivery_id between 11 and 200
 select count(*) as total from MarketsProducts
 
