@@ -1,7 +1,7 @@
 <?php
   namespace Birds;
   
-  use Birds\FlyBirdInterface;
+  use Birds\BirdInterface;
   
   class Ostrich implements BirdInterface {
     public function eat(): void
