@@ -5,7 +5,7 @@
   use Fabric\EconomTaxiCreator;
   use Fabric\StandartTaxiCreator;
   use Fabric\LuxTaxiCreator;
-  use Fabric\Creator;
+  use Fabric\Creator
   use Taxi\Taxi;
   
   function getClientTaxi($type): Taxi {
@@ -29,3 +29,13 @@
   } catch (\Exception $err) {
     echo $err->getMessage();
   }
+  
+  // another method to call
+  
+  function getClientTaxi2(Creator $creator): Taxi {
+    return  $creator->getTaxi();
+  }
+  
+  getClientTaxi2(new EconomTaxiCreator);
+  getClientTaxi2(new StandartTaxiCreator());
+  getClientTaxi2(new LuxTaxiCreator());
