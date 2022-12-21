@@ -10,7 +10,7 @@
   /*
    * Array<TV>
    */
-  function clientCode(Fabric $fabric, int $size): array{
+  function clientCode(Fabric $fabric, int $size): array {
     return [
       'LCD' => $fabric->makeLCD($size),
       'LED' => $fabric->makeLED($size),

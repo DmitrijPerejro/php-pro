@@ -10,7 +10,7 @@
       $this->diagonal = $diagonal;
     }
     
-    private function getSize(): int {
+    public function getSize(): int {
       return $this->diagonal;
     }
     
