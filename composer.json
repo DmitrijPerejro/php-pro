@@ -1,0 +1,16 @@
+{
+    "name": "perejro/pro",
+    "autoload": {
+        "psr-4": {
+            "Fabric\\": "src/Fabric",
+            "Taxi\\": "src/Taxi"
+        }
+    },
+    "authors": [
+        {
+            "name": "perejro",
+            "email": "perejro@centro.team"
+        }
+    ],
+    "require": {}
+}
