@@ -1,0 +1,16 @@
+{
+    "name": "perejro/pro",
+    "autoload": {
+        "psr-4": {
+            "DB\\": "./src/DB",
+            "Controllers\\": "./src/Controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "perejro",
+            "email": "perejro@centro.team"
+        }
+    ],
+    "require": {}
+}
