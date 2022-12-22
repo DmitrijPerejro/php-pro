@@ -1,0 +1,9 @@
+{
+    "name": "perejro/php-pro-course",
+    "autoload": {
+        "psr-4": {
+            "Builder\\": "src/Builder"
+        }
+    },
+    "require": {}
+}
