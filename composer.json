@@ -1,0 +1,15 @@
+{
+    "name": "perejro/pro",
+    "autoload": {
+        "psr-4": {
+            "Perejro\\Pro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "perejro",
+            "email": "perejro@centro.team"
+        }
+    ],
+    "require": {}
+}
